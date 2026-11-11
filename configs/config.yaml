@@ -1,0 +1,111 @@
+seed: 42
+
+paths:
+  raw_data: data/raw/MLND data.xlsx
+  reports_dir: reports
+
+label: Disease_Label
+county: County
+
+counties:
+  - Bungoma
+  - Kakamega
+  - Nakuru
+  - Narok
+  - Trans Nzoia
+  - Uasin Gishu
+
+features:
+  - Chlorosis_Intensity
+  - Green_Yellow_Ratio
+  - Necrotic_Area
+  - Texture_Roughness
+  - Patchiness
+  - Lesion_Distribution
+  - Elongated_Streaks
+  - Irregular_Lesions
+  - Infected_Distribution
+  - Boundary_Sharpness
+  - Transition_Smoothness
+
+clipping:
+  edge_width: 0.01
+  ratio_threshold: 3.0
+
+split:
+  test_size: 0.2
+
+engineering:
+  severity_weights:
+    Chlorosis_Intensity: 0.4
+    Necrotic_Area: 0.4
+    Infected_Distribution: 0.2
+  ratio_eps: 0.05
+
+cv:
+  n_splits: 5
+
+mlflow:
+  experiment: mlnd-baselines
+
+baselines:
+  models: [logistic_regression, random_forest, xgboost, lightgbm, catboost]
+  strategies: [none, class_weight, smote, adasyn]
+  quick:
+    n_splits: 3
+    models: [logistic_regression, random_forest, lightgbm]
+    strategies: [class_weight, smote]
+
+tuning:
+  strategy: class_weight
+  refit: pr_auc
+  n_splits: 5
+  experiment: mlnd-tuning
+  n_iter:
+    logistic_regression: 8
+    random_forest: 30
+    xgboost: 30
+    lightgbm: 30
+    catboost: 15
+  quick:
+    n_splits: 3
+    n_iter: 2
+    models: [logistic_regression, lightgbm]
+
+stacking:
+  experiment: mlnd-stacking
+  bases: [random_forest, xgboost, lightgbm, catboost]
+  singles: [logistic_regression, random_forest, xgboost, lightgbm, catboost]
+  outer_splits: 5
+  inner_splits: 5
+  n_boot: 2000
+  seed_offset: 1
+  quick:
+    bases: [xgboost, lightgbm]
+    singles: [logistic_regression, xgboost, lightgbm]
+    outer_splits: 3
+    inner_splits: 3
+    n_boot: 200
+
+threshold:
+  experiment: mlnd-threshold
+  model: catboost
+  oof_file: oof_probabilities_full.csv
+  policy: recall_target
+  recall_target: 0.80
+  n_boot: 1000
+
+evaluation:
+  experiment: mlnd-final
+  registered_model: mlnd-maize-necrosis
+  n_boot: 1000
+
+llm:
+  model: claude-haiku-4-5
+  max_tokens: 600
+  timeout_s: 20
+  max_retries: 1
+  effort: null
+  top_k_drivers: 5
+  band_margin: 0.15
+  high_risk_at: 0.75

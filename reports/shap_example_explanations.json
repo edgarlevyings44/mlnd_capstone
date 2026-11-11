@@ -1,0 +1,122 @@
+{
+  "flagged_example": {
+    "risk_score": 0.9204488127452007,
+    "threshold": 0.4,
+    "flagged": true,
+    "base_risk": 0.5140983717571124,
+    "base_log_odds": 0.05640843949515246,
+    "raw_log_odds": 2.44846071171981,
+    "drivers": [
+      {
+        "feature": "Elongated_Streaks",
+        "label": "Streak-shaped marks",
+        "value": 1.0,
+        "contribution": 0.9000282976286297,
+        "direction": "raises risk"
+      },
+      {
+        "feature": "Irregular_Lesions",
+        "label": "Irregularly shaped lesions",
+        "value": 0.939,
+        "contribution": 0.6110105196326096,
+        "direction": "raises risk"
+      },
+      {
+        "feature": "Severity_Score",
+        "label": "Overall severity score",
+        "value": 0.759,
+        "contribution": 0.444176942639245,
+        "direction": "raises risk"
+      },
+      {
+        "feature": "Infected_Distribution",
+        "label": "Spread of the infected area",
+        "value": 0.098,
+        "contribution": -0.34949709517205957,
+        "direction": "lowers risk"
+      },
+      {
+        "feature": "Patchiness",
+        "label": "Patchy colour pattern",
+        "value": 0.857,
+        "contribution": 0.28870832967516424,
+        "direction": "raises risk"
+      }
+    ],
+    "other_contribution": 0.4976252778210683,
+    "input": {
+      "County": "Bungoma",
+      "Chlorosis_Intensity": 0.8482384453826707,
+      "Green_Yellow_Ratio": 0.5635795442875207,
+      "Necrotic_Area": 1.0,
+      "Texture_Roughness": 0.824834711403536,
+      "Patchiness": 0.8567814867656882,
+      "Lesion_Distribution": 0.8187433448907551,
+      "Elongated_Streaks": 1.0,
+      "Irregular_Lesions": 0.9391673862339449,
+      "Infected_Distribution": 0.09803497387397866,
+      "Boundary_Sharpness": 0.5987253937133562,
+      "Transition_Smoothness": 0.6070694666924401
+    }
+  },
+  "not_flagged_example": {
+    "risk_score": 0.11956119052093182,
+    "threshold": 0.4,
+    "flagged": false,
+    "base_risk": 0.5140983717571124,
+    "base_log_odds": 0.05640843949515246,
+    "raw_log_odds": -1.9965921354395597,
+    "drivers": [
+      {
+        "feature": "Green_Yellow_Ratio",
+        "label": "Green-to-yellow balance",
+        "value": 0.208,
+        "contribution": -0.7679504523518275,
+        "direction": "lowers risk"
+      },
+      {
+        "feature": "Patchiness",
+        "label": "Patchy colour pattern",
+        "value": 0.0,
+        "contribution": -0.7547627878118434,
+        "direction": "lowers risk"
+      },
+      {
+        "feature": "Severity_Score",
+        "label": "Overall severity score",
+        "value": 0.518,
+        "contribution": -0.30277132950031455,
+        "direction": "lowers risk"
+      },
+      {
+        "feature": "Lesion_Distribution",
+        "label": "Spread of lesions",
+        "value": 0.84,
+        "contribution": 0.21710957662928165,
+        "direction": "raises risk"
+      },
+      {
+        "feature": "Transition_Smoothness",
+        "label": "Smoothness of the healthy-to-infected change",
+        "value": 0.5,
+        "contribution": -0.17393034308245192,
+        "direction": "lowers risk"
+      }
+    ],
+    "other_contribution": -0.27069523881755647,
+    "input": {
+      "County": "Nakuru",
+      "Chlorosis_Intensity": 0.5637355456299424,
+      "Green_Yellow_Ratio": 0.2082566779697561,
+      "Necrotic_Area": 0.5612120668102926,
+      "Texture_Roughness": 0.4805356547686616,
+      "Patchiness": 0.0,
+      "Lesion_Distribution": 0.8399145444742042,
+      "Elongated_Streaks": 0.4280737633273066,
+      "Irregular_Lesions": 0.783405126088626,
+      "Infected_Distribution": 0.3412951307529509,
+      "Boundary_Sharpness": 0.6247908389855523,
+      "Transition_Smoothness": 0.4998861879693479
+    }
+  }
+}

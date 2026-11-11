@@ -1,0 +1,18 @@
+feature,label,mean_abs_shap,share
+Severity_Score,Overall severity score,0.32399069713850953,0.11173486845101731
+Green_Yellow_Ratio,Green-to-yellow balance,0.3134268040717446,0.10809169223463053
+Lesion_Distribution,Spread of lesions,0.27906882825029367,0.09624263625074267
+Boundary_Sharpness,Sharpness of lesion edges,0.27581781994616794,0.09512145904286945
+Irregular_Lesions,Irregularly shaped lesions,0.2587174638111235,0.08922404883915025
+Transition_Smoothness,Smoothness of the healthy-to-infected change,0.25182706999589427,0.0868477545402087
+Patchiness,Patchy colour pattern,0.22669234472666974,0.07817952657467353
+Infected_Distribution,Spread of the infected area,0.21519402031972498,0.07421409245460729
+Elongated_Streaks,Streak-shaped marks,0.21376498998247717,0.07372126189448588
+Texture_Roughness,Leaf surface roughness,0.16680132990086335,0.05752487592555771
+Necrotic_Texture_Interaction,Dead tissue x roughness,0.12415742824221358,0.04281824766693724
+County,County,0.06147069445749175,0.021199435722884956
+Chlorosis_Intensity,Leaf yellowing (chlorosis intensity),0.05712250169838308,0.01969987184580558
+Chlorotic_Necrotic_Index,Yellowing x dead-tissue index,0.04399347034117516,0.015172054829628221
+Lesion_Severity_Ratio,Streaks and irregular lesions relative to green balance,0.036439905111296925,0.01256705220223548
+Necrotic_Area,Dead tissue (necrotic area),0.03160568757998156,0.01089987266684838
+Boundary_Transition_Diff,Edge sharpness minus transition smoothness,0.01954718296333144,0.00674124885771667

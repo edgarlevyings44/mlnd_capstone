@@ -1,0 +1,48 @@
+{
+  "model": "catboost",
+  "hyperparameters": {
+    "depth": 6,
+    "iterations": 585,
+    "l2_leaf_reg": 7,
+    "learning_rate": 0.017322667470546258
+  },
+  "imbalance_strategy": "class_weight",
+  "threshold": 0.4,
+  "input_columns": [
+    "County",
+    "Chlorosis_Intensity",
+    "Green_Yellow_Ratio",
+    "Necrotic_Area",
+    "Texture_Roughness",
+    "Patchiness",
+    "Lesion_Distribution",
+    "Elongated_Streaks",
+    "Irregular_Lesions",
+    "Infected_Distribution",
+    "Boundary_Sharpness",
+    "Transition_Smoothness"
+  ],
+  "counties": [
+    "Bungoma",
+    "Kakamega",
+    "Nakuru",
+    "Narok",
+    "Trans Nzoia",
+    "Uasin Gishu"
+  ],
+  "label_meaning": {
+    "0": "healthy",
+    "1": "MLND infected"
+  },
+  "n_train": 6313,
+  "seed": 42,
+  "library_versions": {
+    "scikit-learn": "1.9.1",
+    "catboost": "1.2.10",
+    "pandas": "3.1.0",
+    "numpy": "2.5.4",
+    "imbalanced-learn": "0.14.2",
+    "mlflow": "3.17.2",
+    "python": "3.12.13"
+  }
+}

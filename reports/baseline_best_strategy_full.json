@@ -1,0 +1,13 @@
+{
+  "best_strategy_by_model": {
+    "logistic_regression": "adasyn",
+    "catboost": "class_weight",
+    "lightgbm": "class_weight",
+    "random_forest": "class_weight",
+    "xgboost": "adasyn"
+  },
+  "overall_best": {
+    "model": "logistic_regression",
+    "strategy": "adasyn"
+  }
+}

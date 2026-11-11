@@ -1,0 +1,251 @@
+{
+  "n_rows": 7892,
+  "n_columns": 13,
+  "duplicate_rows": 0,
+  "class_counts": {
+    "0": 5045,
+    "1": 2847
+  },
+  "pct_infected": 36.07,
+  "imbalance_ratio": 1.77,
+  "by_county": [
+    {
+      "County": "Bungoma",
+      "0": 859,
+      "1": 446,
+      "total": 1305,
+      "pct_infected": 34.2
+    },
+    {
+      "County": "Kakamega",
+      "0": 854,
+      "1": 437,
+      "total": 1291,
+      "pct_infected": 33.8
+    },
+    {
+      "County": "Nakuru",
+      "0": 823,
+      "1": 498,
+      "total": 1321,
+      "pct_infected": 37.7
+    },
+    {
+      "County": "Narok",
+      "0": 834,
+      "1": 534,
+      "total": 1368,
+      "pct_infected": 39.0
+    },
+    {
+      "County": "Trans Nzoia",
+      "0": 817,
+      "1": 463,
+      "total": 1280,
+      "pct_infected": 36.2
+    },
+    {
+      "County": "Uasin Gishu",
+      "0": 858,
+      "1": 469,
+      "total": 1327,
+      "pct_infected": 35.3
+    }
+  ],
+  "feature_summary": [
+    {
+      "feature": "Chlorosis_Intensity",
+      "mean": 0.581,
+      "std": 0.249,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "feature": "Green_Yellow_Ratio",
+      "mean": 0.573,
+      "std": 0.248,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "feature": "Necrotic_Area",
+      "mean": 0.578,
+      "std": 0.25,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "feature": "Texture_Roughness",
+      "mean": 0.577,
+      "std": 0.248,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "feature": "Patchiness",
+      "mean": 0.575,
+      "std": 0.248,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "feature": "Lesion_Distribution",
+      "mean": 0.58,
+      "std": 0.249,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "feature": "Elongated_Streaks",
+      "mean": 0.579,
+      "std": 0.252,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "feature": "Irregular_Lesions",
+      "mean": 0.577,
+      "std": 0.251,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "feature": "Infected_Distribution",
+      "mean": 0.576,
+      "std": 0.251,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "feature": "Boundary_Sharpness",
+      "mean": 0.577,
+      "std": 0.249,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "feature": "Transition_Smoothness",
+      "mean": 0.575,
+      "std": 0.248,
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "clipping": [
+    {
+      "feature": "Chlorosis_Intensity",
+      "at_0": 82,
+      "near_0": 21,
+      "ratio_0": 3.9,
+      "at_1": 290,
+      "near_1": 41,
+      "ratio_1": 7.1,
+      "clipped": true
+    },
+    {
+      "feature": "Green_Yellow_Ratio",
+      "at_0": 91,
+      "near_0": 15,
+      "ratio_0": 6.1,
+      "at_1": 259,
+      "near_1": 37,
+      "ratio_1": 7.0,
+      "clipped": true
+    },
+    {
+      "feature": "Necrotic_Area",
+      "at_0": 98,
+      "near_0": 12,
+      "ratio_0": 8.2,
+      "at_1": 297,
+      "near_1": 36,
+      "ratio_1": 8.2,
+      "clipped": true
+    },
+    {
+      "feature": "Texture_Roughness",
+      "at_0": 79,
+      "near_0": 13,
+      "ratio_0": 6.1,
+      "at_1": 308,
+      "near_1": 31,
+      "ratio_1": 9.9,
+      "clipped": true
+    },
+    {
+      "feature": "Patchiness",
+      "at_0": 85,
+      "near_0": 14,
+      "ratio_0": 6.1,
+      "at_1": 265,
+      "near_1": 30,
+      "ratio_1": 8.8,
+      "clipped": true
+    },
+    {
+      "feature": "Lesion_Distribution",
+      "at_0": 81,
+      "near_0": 13,
+      "ratio_0": 6.2,
+      "at_1": 279,
+      "near_1": 36,
+      "ratio_1": 7.8,
+      "clipped": true
+    },
+    {
+      "feature": "Elongated_Streaks",
+      "at_0": 93,
+      "near_0": 9,
+      "ratio_0": 10.3,
+      "at_1": 316,
+      "near_1": 36,
+      "ratio_1": 8.8,
+      "clipped": true
+    },
+    {
+      "feature": "Irregular_Lesions",
+      "at_0": 113,
+      "near_0": 10,
+      "ratio_0": 11.3,
+      "at_1": 291,
+      "near_1": 34,
+      "ratio_1": 8.6,
+      "clipped": true
+    },
+    {
+      "feature": "Infected_Distribution",
+      "at_0": 95,
+      "near_0": 12,
+      "ratio_0": 7.9,
+      "at_1": 326,
+      "near_1": 31,
+      "ratio_1": 10.5,
+      "clipped": true
+    },
+    {
+      "feature": "Boundary_Sharpness",
+      "at_0": 100,
+      "near_0": 10,
+      "ratio_0": 10.0,
+      "at_1": 276,
+      "near_1": 45,
+      "ratio_1": 6.1,
+      "clipped": true
+    },
+    {
+      "feature": "Transition_Smoothness",
+      "at_0": 81,
+      "near_0": 10,
+      "ratio_0": 8.1,
+      "at_1": 260,
+      "near_1": 23,
+      "ratio_1": 11.3,
+      "clipped": true
+    }
+  ],
+  "n_features_clipped": 11,
+  "share_values_on_bound_by_class": {
+    "0": 0.033,
+    "1": 0.0745
+  }
+}

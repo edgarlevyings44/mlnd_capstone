@@ -1,0 +1,32 @@
+{
+  "model": "catboost",
+  "policy": "recall_target",
+  "recall_target": 0.8,
+  "threshold": 0.4,
+  "oof_estimates": {
+    "recall": 0.8063241106719368,
+    "precision": 0.58752,
+    "specificity": 0.6806243805748265,
+    "f1": 0.679748241392077,
+    "f2": 0.7504291670072754,
+    "gmean": 0.7408129644982159,
+    "flagged_share": 0.49501029621416126
+  },
+  "threshold_median": 0.4,
+  "threshold_ci95": [
+    0.38,
+    0.42
+  ],
+  "recall_ci95": [
+    0.7889965858645412,
+    0.8213847344166039
+  ],
+  "precision_ci95": [
+    0.5701830397298062,
+    0.6053984993970494
+  ],
+  "n_boot": 1000,
+  "n_oof_rows": 6313,
+  "source": "oof_probabilities_full.csv",
+  "selected_on": "out-of-fold predictions of the training split"
+}
