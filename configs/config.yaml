@@ -35,6 +35,7 @@ clipping:
 split:
   test_size: 0.2
 
+# Severity_Score = 0.4 × Chlorosis_Intensity + 0.4 × Necrotic_Area + 0.2 × Infected_Distribution
 engineering:
   severity_weights:
     Chlorosis_Intensity: 0.4
