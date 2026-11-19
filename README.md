@@ -45,7 +45,7 @@ Held-out test split (1,579 leaves, 570 infected), scored once at threshold 0.40,
 
 - **Stacking does not beat the single model.** On cross-validated PR-AUC, stacking ties with CatBoost (difference +0.0016, 95% CI -0.0003 to +0.0034), so the simpler single model is deployed. See [reports/stacking_full.md](reports/stacking_full.md).
 - **Across counties:** the best-to-worst gap on the test split is 0.055 PR-AUC and 0.113 recall. Leave-one-county-out (train on five, score the sixth) gives recall 0.796 to 0.820. See [reports/loco.md](reports/loco.md).
-- **The score is not a probability.** The class-weighted model over-predicts (mean predicted 0.445 against a true rate of 0.361, ECE 0.084, Brier 0.168), so the API calls it a *risk score*.
+- **The score is not a probability.** The class-weighted model over-predicts (mean predicted 0.445 against a true rate of 0.361, Expected Calibration Error(ECE) 0.084, Brier 0.168), so the API calls it a *risk score*.
 
 ## 3. Architecture
 
@@ -237,7 +237,7 @@ The deployed model is registered as `mlnd-maize-necrosis` (version 1) in the MLf
 ## 10. Limitations
 
 - **Modest signal.** ROC-AUC is about 0.82 and precision at the chosen threshold is 0.59, so about four in ten flagged leaves are not infected. That is acceptable for screening but not for a diagnosis.
-- **Calibration.** The score over-predicts at every level (ECE 0.084), so it should be read as a ranking, not a probability.
+- **Calibration.** The score over-predicts at every level Expected Calibration Error(ECE 0.084), so it should be read as a ranking, not a probability.
 - **Data quality.** Values pile up at exactly 0 and 1 (6 to 11 times the neighbouring range, in all 11 features), which suggests clipping or a measurement artefact. The data may also have been processed before release, so these results do not prove how the model would perform in the field.
 - **Location is county only.** There is no weather, variety or planting-date information, and a county not in the training set is rejected.
 - **Leave-one-county-out scores may be a little too good.** The settings and the threshold were chosen using all six counties, so a truly new county could score slightly lower.
