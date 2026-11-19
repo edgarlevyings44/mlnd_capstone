@@ -17,7 +17,8 @@ A scripted, reproducible machine-learning pipeline that classifies maize leaves 
 8. [Experiment tracking](#8-experiment-tracking)
 9. [Method summary](#9-method-summary)
 10. [Limitations](#10-limitations)
-11. [Data and AI use](#11-data-and-ai-use)
+11. [Presentation](#11-presentation)
+12. [Data and AI use](#12-data-and-ai-use)
 
 ## 1. Overview
 
@@ -73,7 +74,7 @@ src/mlnd/
 scripts/run_pipeline.py one command for the whole pipeline
 artifacts/              deployable model, threshold, metadata
 reports/                every table and metric the pipeline produces
-tests/                  126 pytest tests
+tests/                  127 pytest tests
 Dockerfile, docker-compose.yml
 ```
 
@@ -243,7 +244,11 @@ The deployed model is registered as `mlnd-maize-necrosis` (version 1) in the MLf
 - **Leave-one-county-out scores may be a little too good.** The settings and the threshold were chosen using all six counties, so a truly new county could score slightly lower.
 - **The LLM text is paraphrase only.** The guardrail reduces, but cannot eliminate, wording slips. It never changes the score, band or recommendations.
 
-## 11. Data and AI use
+## 11. Presentation
+
+[Screening Maize Leaves for Lethal Necrosis Disease (LEO_224036)](reports/Screening%20Maize%20Leaves%20for%20Lethal%20Necrosis%20Disease_LEO_224036.pdf)
+
+## 12. Data and AI use
 
 - **Data:** Wanyonyi, M. (2026). Real world dataset for maize lethal necrosis disease classification in Kenya incorporating visual, texture, and spatial features under class imbalance. Zenodo (CERN European Organization for Nuclear Research). https://doi.org/10.5281/zenodo.19997730
 - **AI use:** see [AI_USE.md](AI_USE.md).
